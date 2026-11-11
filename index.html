@@ -1,0 +1,846 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Estudo de Crescimento · Dr. Nichollas Mourão</title>
+<meta name="description" content="Plano de crescimento do Instagram e de agendamentos do Dr. Nichollas Mourão em Americana, Nova Odessa, Sumaré e Santa Bárbara d'Oeste.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<style>
+:root{
+  --cream:#F4F1EA; --paper:#FBF9F4; --ink:#0B1E1A; --ink2:#11302A; --ink3:#173B33;
+  --gold:#8A6621; --gold2:#D8B96C; --sage:#2F7A63; --sage2:#7FCBB0;
+  --muted:#5B6661; --line:rgba(11,30,26,.12); --warn:#A5402C;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --serif:"Fraunces",Georgia,serif; --sans:"Inter",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+html,body{overflow-x:clip}
+body{background:var(--cream);color:var(--ink);font:400 17px/1.65 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--gold2);color:var(--ink)}
+a{color:inherit}
+img{display:block;max-width:100%}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;letter-spacing:-.02em;line-height:1.06}
+em{font-style:italic}
+.wrap{max-width:1180px;margin:0 auto;padding:0 40px}
+@media(max-width:700px){.wrap{padding:0 16px}body{font-size:16px}}
+.grain{position:fixed;inset:0;pointer-events:none;z-index:90;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* progress + nav */
+.progress{position:fixed;top:0;left:0;height:2px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--gold),var(--gold2));z-index:80}
+.nav{position:fixed;top:16px;left:50%;transform:translate(-50%,-160%);z-index:70;display:flex;align-items:center;gap:4px;padding:6px 6px 6px 18px;border-radius:999px;background:rgba(11,30,26,.82);backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4);border:1px solid rgba(216,185,108,.18);box-shadow:0 14px 40px -12px rgba(0,0,0,.45);transition:transform .8s var(--ease);max-width:calc(100vw - 24px)}
+.nav.show{transform:translate(-50%,0)}
+.nav .brand{color:#fff;font:500 15px var(--serif);white-space:nowrap;margin-right:10px}
+.nav .brand i{color:var(--gold2)}
+.nav .links{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+.nav .links::-webkit-scrollbar{display:none}
+.nav a{color:rgba(255,255,255,.6);text-decoration:none;font:500 12.5px var(--sans);padding:8px 13px;border-radius:999px;white-space:nowrap;transition:color .3s,background .3s}
+.nav a:hover{color:#fff}
+.nav a.on{background:rgba(216,185,108,.16);color:var(--gold2)}
+@media(max-width:760px){.nav .brand{display:none}.nav{padding-left:6px}.nav a{padding:8px 10px}}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;background:radial-gradient(120% 90% at 85% 10%,#fffdf7 0%,var(--cream) 55%,#ece6d8 100%)}
+.hero .wrap{width:100%;display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:center;padding-top:120px;padding-bottom:80px}
+.kicker{display:inline-flex;align-items:center;gap:10px;font:600 11.5px var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.kicker::before{content:"";width:34px;height:1px;background:currentColor}
+.hero h1{font-size:clamp(54px,8.4vw,118px);font-weight:300;margin:26px 0 28px;line-height:.98;letter-spacing:-.035em}
+.hero h1 em{color:var(--gold);font-weight:400}
+.hero h1 .w{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.08em;margin-bottom:-.08em}
+.hero h1 .w>span{display:inline-block;transform:translateY(110%);animation:rise 1.3s var(--ease) forwards;animation-delay:calc(var(--i)*90ms + .2s)}
+@keyframes rise{to{transform:none}}
+.hero .lead{max-width:560px;font-size:clamp(17px,1.6vw,20px);color:var(--muted);line-height:1.6}
+.hero .lead b{color:var(--ink);font-weight:600}
+.fade{opacity:0;transform:translateY(18px);animation:fadeup 1.3s var(--ease) forwards}
+@keyframes fadeup{to{opacity:1;transform:none}}
+.hero .meta{display:flex;gap:36px;flex-wrap:wrap;margin-top:44px;padding-top:22px;border-top:1px solid var(--line);font-size:13.5px;color:var(--muted)}
+.hero .meta b{display:block;color:var(--ink);font:500 17px var(--serif)}
+.portrait{position:relative;justify-self:end;width:min(100%,470px)}
+.arch{position:relative;aspect-ratio:9/10;border-radius:999px 999px 28px 28px;overflow:hidden;clip-path:inset(100% 0 0 0 round 999px 999px 28px 28px);animation:unveil 1.6s var(--ease) .35s forwards;box-shadow:0 50px 90px -40px rgba(11,30,26,.45)}
+@keyframes unveil{to{clip-path:inset(0 0 0 0 round 999px 999px 28px 28px)}}
+.arch img{width:100%;height:108%;object-fit:cover;object-position:50% 30%;transform:scale(1.15);animation:settle 2.2s var(--ease) .35s forwards;will-change:transform}
+@keyframes settle{to{transform:scale(1)}}
+.arch::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,30,26,0) 55%,rgba(11,30,26,.35) 100%)}
+.ring{position:absolute;inset:-18px;border:1px solid rgba(138,102,33,.35);border-radius:999px 999px 40px 40px;pointer-events:none}
+.badge{position:absolute;display:flex;align-items:center;gap:12px;padding:12px 18px 12px 12px;border-radius:18px;background:rgba(251,249,244,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.7);box-shadow:0 20px 40px -18px rgba(11,30,26,.35);font-size:12.5px;color:var(--muted);line-height:1.3;opacity:0;animation:fadeup 1.2s var(--ease) forwards}
+.badge b{display:block;font:500 19px var(--serif);color:var(--ink)}
+.badge .ic{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:var(--ink);color:var(--gold2);flex:none}
+.badge .ic svg{width:18px;height:18px}
+.b1{left:-56px;top:20%;animation-delay:1.3s}
+.b2{right:-30px;top:52%;animation-delay:1.5s}
+.b3{left:-24px;bottom:7%;animation-delay:1.7s}
+.cue{position:absolute;left:50%;bottom:24px;width:1px;height:48px;background:linear-gradient(rgba(11,30,26,0),rgba(11,30,26,.35));overflow:hidden}
+.cue::after{content:"";position:absolute;left:0;top:-50%;width:1px;height:50%;background:var(--gold);animation:cue 2.2s var(--ease) infinite}
+@keyframes cue{to{top:110%}}
+@media(max-width:920px){
+  .hero .wrap{grid-template-columns:1fr;gap:40px;padding-top:110px}
+  .portrait{justify-self:center;width:min(78vw,380px);order:-1}
+  .b1{left:-10px;top:auto;bottom:22%}.b2{display:none}.b3{left:auto;right:-10px;bottom:6%}
+  .cue{display:none}
+}
+
+/* sections */
+section.s{position:relative;overflow:hidden;padding:clamp(96px,12vw,160px) 0}
+section.dark{background:var(--ink);color:#EFEBE2}
+section.paper{background:var(--paper)}
+.chap{display:flex;align-items:baseline;gap:18px;margin-bottom:22px}
+.chap .n{font:300 15px var(--serif);color:var(--gold);letter-spacing:.06em}
+.chap .t{font:600 11.5px var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+.dark .chap .t{color:rgba(239,235,226,.55)}
+.dark .chap .n{color:var(--gold2)}
+h2{font-size:clamp(38px,5.6vw,72px);font-weight:300;max-width:940px;letter-spacing:-.03em}
+h2 em{color:var(--gold)}
+.dark h2 em{color:var(--gold2)}
+.intro{max-width:700px;margin-top:26px;font-size:clamp(17px,1.5vw,19px);color:var(--muted)}
+.dark .intro{color:rgba(239,235,226,.68)}
+.bignum{position:absolute;right:-1vw;top:40px;font:300 clamp(160px,26vw,380px)/1 var(--serif);color:transparent;-webkit-text-stroke:1px rgba(138,102,33,.18);pointer-events:none;user-select:none;will-change:transform}
+.dark .bignum{-webkit-text-stroke:1px rgba(216,185,108,.12)}
+h3{font-size:clamp(26px,3vw,36px);font-weight:400}
+.sub{font:600 11.5px var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:96px 0 18px}
+.dark .sub{color:var(--gold2)}
+
+/* reveal */
+[data-r]{opacity:0;transform:translateY(34px);transition:opacity 1.2s var(--ease),transform 1.2s var(--ease);transition-delay:var(--d,0s)}
+[data-r].in{opacity:1;transform:none}
+[data-r="mask"]{opacity:1;transform:none;clip-path:inset(0 0 100% 0);transition:clip-path 1.4s var(--ease)}
+[data-r="mask"].in{clip-path:inset(0 0 0 0)}
+
+/* ch1 assets */
+.assets{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:24px;overflow:hidden;margin-top:64px}
+.asset{background:var(--paper);padding:30px 28px 28px;transition:background .5s var(--ease)}
+.asset:hover{background:#fff}
+.asset .v{font:300 clamp(40px,4.4vw,56px)/1 var(--serif);letter-spacing:-.03em;color:var(--ink)}
+.asset .v small{font-size:.5em;color:var(--gold)}
+.asset .l{margin-top:12px;font-size:14.5px;color:var(--muted);line-height:1.5}
+.asset .l b{color:var(--ink);font-weight:600}
+@media(max-width:860px){.assets{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.assets{grid-template-columns:1fr}}
+
+.leaks{margin-top:8px;border-top:1px solid var(--line)}
+.leak{display:grid;grid-template-columns:70px 1fr 1.3fr;gap:28px;padding:30px 0;border-bottom:1px solid var(--line);align-items:start;transition:padding .5s var(--ease)}
+.leak:hover{padding-left:10px}
+.leak .k{font:300 30px/1 var(--serif);color:var(--gold)}
+.leak h4{font-size:23px;font-weight:400;line-height:1.25}
+.leak p{color:var(--muted);font-size:15.5px}
+.leak p b{color:var(--ink);font-weight:600}
+@media(max-width:820px){.leak{grid-template-columns:44px 1fr;gap:10px 16px}.leak p{grid-column:2}}
+
+.tension{margin-top:96px;text-align:center;position:relative}
+.tension p{font:300 clamp(30px,4.4vw,58px)/1.15 var(--serif);letter-spacing:-.025em;max-width:980px;margin:0 auto}
+.tension p em{color:var(--gold)}
+.tension .by{margin-top:22px;font:600 11.5px var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+
+/* ch2 territory */
+.terr{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;margin-top:70px;align-items:center}
+.map{position:relative;aspect-ratio:1/1;border-radius:28px;background:radial-gradient(70% 70% at 45% 40%,#17392f 0%,#0e2621 60%,#0b1e1a 100%);border:1px solid rgba(216,185,108,.14);overflow:hidden}
+.map svg{position:absolute;inset:0;width:100%;height:100%}
+.map .lbl{font:500 13px var(--sans);fill:#EFEBE2}
+.map .pop{font:400 11px var(--sans);fill:rgba(239,235,226,.55)}
+.map .route{stroke:rgba(216,185,108,.45);stroke-width:1;stroke-dasharray:3 5;fill:none;stroke-dashoffset:300;transition:stroke-dashoffset 2.4s var(--ease)}
+.map.in .route{stroke-dashoffset:0}
+.pulse{transform-origin:center;transform-box:fill-box;animation:pulse 2.8s ease-out infinite}
+@keyframes pulse{0%{transform:scale(.6);opacity:.9}100%{transform:scale(2.6);opacity:0}}
+.cities{display:grid;gap:12px}
+.city{display:grid;grid-template-columns:1fr auto;align-items:center;gap:6px 18px;padding:20px 22px;border-radius:18px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.07);transition:background .5s var(--ease),border-color .5s}
+.city:hover{background:rgba(216,185,108,.07);border-color:rgba(216,185,108,.25)}
+.city h4{font-size:22px}
+.city .num{font:300 26px var(--serif);color:var(--gold2);text-align:right}
+.city .bar{grid-column:1/-1;height:3px;border-radius:3px;background:rgba(255,255,255,.07);overflow:hidden}
+.city .bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--sage),var(--sage2));transition:width 1.8s var(--ease) .3s}
+.city.in .bar i{width:var(--w)}
+.city .tag{font-size:12px;color:rgba(239,235,226,.5)}
+.city .tag.core{color:var(--sage2)}
+.total{display:flex;justify-content:space-between;align-items:baseline;padding:18px 22px 0;color:rgba(239,235,226,.6);font-size:14px}
+.total b{font:300 34px var(--serif);color:#fff}
+@media(max-width:920px){.terr{grid-template-columns:1fr}}
+
+.persona{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;margin-top:20px;align-items:start}
+.persona .who{font:300 clamp(26px,2.8vw,34px)/1.3 var(--serif);color:#fff}
+.persona .who em{color:var(--gold2)}
+.signals{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.signal{padding:18px 20px;border-radius:16px;border:1px solid rgba(255,255,255,.08);font-size:15px;color:rgba(239,235,226,.78);background:rgba(255,255,255,.02)}
+.signal b{display:block;color:var(--gold2);font:500 12px var(--sans);letter-spacing:.16em;text-transform:uppercase;margin-bottom:6px}
+@media(max-width:860px){.persona{grid-template-columns:1fr}.signals{grid-template-columns:1fr}}
+
+.thesis{margin-top:96px;padding:clamp(40px,6vw,72px);border-radius:32px;background:linear-gradient(135deg,rgba(216,185,108,.12),rgba(127,203,176,.06));border:1px solid rgba(216,185,108,.22);position:relative;overflow:hidden}
+.thesis .q{font:300 clamp(30px,4.2vw,56px)/1.12 var(--serif);letter-spacing:-.025em;color:#fff;max-width:900px}
+.thesis .q em{color:var(--gold2)}
+.thesis p{margin-top:24px;max-width:720px;color:rgba(239,235,226,.72)}
+.thesis .glow{position:absolute;width:420px;height:420px;border-radius:50%;right:-120px;top:-160px;background:radial-gradient(circle,rgba(216,185,108,.28),transparent 65%);animation:drift 14s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translate(-60px,50px) scale(1.1)}}
+.note-sp{margin-top:20px;font-size:13.5px;color:rgba(239,235,226,.45)}
+
+/* ch3 profile mock */
+.move{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border-radius:999px;background:var(--ink);color:var(--gold2);font:600 11.5px var(--sans);letter-spacing:.2em;text-transform:uppercase}
+.split{display:grid;grid-template-columns:.9fr 1.1fr;gap:72px;align-items:center;margin-top:40px}
+@media(max-width:920px){.split{grid-template-columns:1fr;gap:48px}}
+.phone{position:relative;width:min(100%,380px);margin:0 auto;border-radius:46px;padding:14px;background:#0d0d0d;box-shadow:0 60px 100px -40px rgba(11,30,26,.55),inset 0 0 0 2px #2a2a2a}
+.screen{border-radius:34px;background:#fff;overflow:hidden;padding:26px 18px 22px;min-height:520px;color:#111;font-family:-apple-system,system-ui,sans-serif}
+.toggle{display:flex;gap:4px;padding:4px;border-radius:999px;background:#efefef;margin-bottom:20px}
+.toggle button{flex:1;border:0;background:none;padding:9px 0;border-radius:999px;font:600 12.5px var(--sans);color:#777;cursor:pointer;transition:background .4s var(--ease),color .4s}
+.toggle button.on{background:#111;color:#fff}
+.ig-top{display:flex;align-items:center;gap:18px}
+.ig-av{width:76px;height:76px;border-radius:50%;padding:3px;background:conic-gradient(from 200deg,#d8b96c,#8a6621,#2f7a63,#d8b96c);flex:none}
+.ig-av img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:3px solid #fff}
+.ig-stats{display:flex;flex:1;justify-content:space-around;text-align:center;font-size:12px;color:#444}
+.ig-stats b{display:block;font-size:16px;color:#111}
+.ig-name{margin-top:14px;font-weight:700;font-size:13.5px;display:flex;align-items:center;gap:5px}
+.ig-name svg{width:14px;height:14px;flex:none}
+.bio{position:relative;margin-top:4px;font-size:13.5px;line-height:1.45;min-height:200px}
+.bio .v{position:absolute;inset:0;transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.bio .v.off{opacity:0;transform:translateY(8px);pointer-events:none}
+.bio .more{color:#888}
+.bio .lnk{color:#00376b;font-weight:600}
+.bio .hl{background:linear-gradient(transparent 55%,rgba(216,185,108,.45) 55%)}
+.ig-btn{margin-top:14px;display:flex;gap:6px}
+.ig-btn span{flex:1;text-align:center;padding:8px 0;border-radius:9px;background:#efefef;font-size:12.5px;font-weight:600}
+.ig-btn span.cta{background:#0B1E1A;color:#D8B96C}
+.hls{display:flex;gap:12px;margin-top:18px;overflow:hidden}
+.hl{text-align:center;font-size:10.5px;color:#333;width:58px;flex:none}
+.hl i{display:grid;place-items:center;width:56px;height:56px;border-radius:50%;border:1px solid #ddd;margin-bottom:5px;font-style:normal;font-size:18px;background:#fafafa}
+.hl.g i{border-color:#D8B96C;background:#0B1E1A;color:#D8B96C;font-size:14px}
+
+.fixes{display:grid;gap:14px}
+.fix{display:grid;grid-template-columns:28px 1fr;gap:16px;padding:20px 22px;border-radius:18px;background:var(--paper);border:1px solid var(--line);transition:transform .6s var(--ease),box-shadow .6s var(--ease)}
+.fix:hover{transform:translateY(-3px);box-shadow:0 20px 40px -24px rgba(11,30,26,.3)}
+.fix .dot{width:28px;height:28px;border-radius:50%;background:var(--ink);color:var(--gold2);display:grid;place-items:center;font:500 13px var(--serif)}
+.fix h4{font-size:19px;font-weight:500;margin-bottom:4px;font-family:var(--serif)}
+.fix p{font-size:15px;color:var(--muted)}
+.fix code{font:500 13px ui-monospace,SFMono-Regular,Menlo,monospace;background:#efe9db;padding:2px 6px;border-radius:6px;color:var(--ink)}
+
+/* pillars */
+.pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
+.pillar{position:relative;padding:30px 24px 26px;border-radius:22px;background:var(--paper);border:1px solid var(--line);overflow:hidden;transition:transform .7s var(--ease),box-shadow .7s var(--ease)}
+.pillar:hover{transform:translateY(-6px);box-shadow:0 30px 60px -30px rgba(11,30,26,.35)}
+.pillar .pct{font:300 54px/1 var(--serif);letter-spacing:-.03em;color:var(--gold)}
+.pillar h4{font-size:22px;margin:14px 0 10px}
+.pillar p{font-size:14.5px;color:var(--muted)}
+.pillar .fill{position:absolute;left:0;bottom:0;height:4px;width:0;background:linear-gradient(90deg,var(--gold),var(--gold2));transition:width 1.6s var(--ease) .4s}
+.pillar.in .fill{width:var(--w)}
+@media(max-width:980px){.pillars{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.pillars{grid-template-columns:1fr}}
+
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;margin-top:40px}
+.day{padding:18px 14px;border-radius:16px;border:1px solid var(--line);background:#fff;min-height:150px;display:flex;flex-direction:column;gap:8px}
+.day .d{font:600 11px var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.day .f{font:500 17px/1.2 var(--serif)}
+.day .x{font-size:13px;color:var(--muted);margin-top:auto}
+.day.hot{background:var(--ink);border-color:var(--ink);color:#EFEBE2}
+.day.hot .d{color:var(--gold2)}.day.hot .x{color:rgba(239,235,226,.6)}
+.day.off{background:transparent;border-style:dashed}
+@media(max-width:980px){.week{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:560px){.week{grid-template-columns:1fr 1fr}}
+
+.marq{margin-top:80px;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.track{display:flex;gap:14px;width:max-content;animation:marq 70s linear infinite}
+.track.rev{animation-direction:reverse;margin-top:14px;animation-duration:80s}
+.marq:hover .track{animation-play-state:paused}
+@keyframes marq{to{transform:translateX(-50%)}}
+.hook{padding:16px 22px;border-radius:999px;background:#fff;border:1px solid var(--line);font:400 16px var(--serif);white-space:nowrap}
+.hook::before{content:"“";color:var(--gold);margin-right:4px}
+.hook::after{content:"”";color:var(--gold);margin-left:2px}
+.ctafix{margin-top:46px;display:flex;gap:18px;align-items:center;padding:22px 26px;border-radius:20px;background:var(--ink);color:#EFEBE2;flex-wrap:wrap}
+.ctafix span{font:600 11px var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--gold2)}
+.ctafix p{font:400 20px/1.35 var(--serif)}
+
+/* ch4 funnel */
+.funnel{display:grid;gap:14px;margin-top:54px}
+.stage{display:grid;grid-template-columns:200px 1fr 120px;gap:26px;align-items:center;padding:26px 28px;border-radius:22px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.08);position:relative;overflow:hidden}
+.stage::before{content:"";position:absolute;left:0;top:0;bottom:0;width:0;background:linear-gradient(90deg,rgba(216,185,108,.13),rgba(216,185,108,0));transition:width 1.8s var(--ease) .2s}
+.stage.in::before{width:var(--w)}
+.stage>*{position:relative}
+.stage .nm{font:300 28px/1.1 var(--serif);color:#fff}
+.stage .nm small{display:block;font:600 11px var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--gold2);margin-bottom:8px}
+.stage p{font-size:15px;color:rgba(239,235,226,.72)}
+.stage p b{color:#fff;font-weight:600}
+.stage .pc{font:300 46px var(--serif);color:var(--gold2);text-align:right}
+.stage .pc small{display:block;font:500 12px var(--sans);color:rgba(239,235,226,.5)}
+@media(max-width:820px){.stage{grid-template-columns:1fr;gap:10px}.stage .pc{text-align:left}}
+
+.ladder{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+.rung{padding:26px 24px;border-radius:20px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.02)}
+.rung .m{font:600 11px var(--sans);letter-spacing:.2em;text-transform:uppercase;color:rgba(239,235,226,.5)}
+.rung .val{font:300 44px/1.1 var(--serif);color:#fff;margin:10px 0 6px}
+.rung .dd{font-size:13.5px;color:var(--gold2)}
+.rung p{margin-top:12px;font-size:14px;color:rgba(239,235,226,.62)}
+.rung.cur{border-color:rgba(216,185,108,.4);background:rgba(216,185,108,.06)}
+@media(max-width:820px){.ladder{grid-template-columns:1fr}}
+
+.sim{margin-top:60px;display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:28px;overflow:hidden;border:1px solid rgba(216,185,108,.22)}
+.sim .in-p{padding:34px;background:rgba(255,255,255,.03);display:grid;gap:22px}
+.sim .out{padding:34px;background:linear-gradient(160deg,#173B33,#0f2a24);display:flex;flex-direction:column;justify-content:center;gap:18px}
+.field label{display:flex;justify-content:space-between;font-size:14px;color:rgba(239,235,226,.75);margin-bottom:10px}
+.field label b{font:500 17px var(--serif);color:#fff}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:4px;border-radius:4px;background:rgba(255,255,255,.12);outline:none}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:var(--gold2);border:4px solid var(--ink);box-shadow:0 0 0 1px var(--gold2);cursor:grab}
+input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:var(--gold2);border:4px solid var(--ink);cursor:grab}
+.o-row{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:14px}
+.o-row span{font-size:14px;color:rgba(239,235,226,.65)}
+.o-row b{font:300 40px/1 var(--serif);color:#fff}
+.o-row.big b{font-size:52px;color:var(--gold2)}
+.sim .disc{font-size:12.5px;color:rgba(239,235,226,.45);line-height:1.5}
+@media(max-width:860px){.sim{grid-template-columns:1fr}}
+
+.outside{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+.out-c{padding:28px 24px;border-radius:20px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08)}
+.out-c .ic{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:rgba(216,185,108,.12);color:var(--gold2);margin-bottom:18px}
+.out-c .ic svg{width:20px;height:20px}
+.out-c h4{font-size:22px;color:#fff;margin-bottom:10px}
+.out-c p{font-size:14.5px;color:rgba(239,235,226,.66)}
+@media(max-width:860px){.outside{grid-template-columns:1fr}}
+
+/* ch5 */
+.chat-wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;margin-top:56px}
+@media(max-width:920px){.chat-wrap{grid-template-columns:1fr}}
+.rules{display:grid;gap:12px}
+.rule{display:flex;gap:18px;align-items:flex-start;padding:20px 22px;border-radius:18px;background:#fff;border:1px solid var(--line)}
+.rule .t{font:300 30px/1 var(--serif);color:var(--gold);min-width:84px;white-space:nowrap}
+.rule h4{font:500 18px/1.3 var(--serif);margin-bottom:4px}
+.rule p{font-size:14.5px;color:var(--muted)}
+.chat{border-radius:28px;background:#ECE5DA;padding:22px 18px;box-shadow:0 40px 80px -40px rgba(11,30,26,.4);position:relative}
+.chat-h{display:flex;align-items:center;gap:12px;padding:0 6px 16px;border-bottom:1px solid rgba(0,0,0,.08);margin-bottom:16px}
+.chat-h img{width:40px;height:40px;border-radius:50%;object-fit:cover}
+.chat-h b{display:block;font-size:14.5px}
+.chat-h span{font-size:12px;color:#667}
+.msg{max-width:86%;padding:10px 14px 18px;border-radius:14px;font-size:14px;line-height:1.45;margin-bottom:10px;position:relative;opacity:0;transform:translateY(10px) scale(.98);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.msg time{position:absolute;right:10px;bottom:4px;font-size:10.5px;color:#889}
+.msg.p{background:#fff;border-top-left-radius:4px}
+.msg.c{background:#D9F7C9;margin-left:auto;border-top-right-radius:4px}
+.chat.in .msg{opacity:1;transform:none}
+.msg .step{display:block;font:600 10px var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--sage);margin-bottom:3px}
+
+.road{position:relative;margin-top:56px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.road .line{position:absolute;left:0;right:0;top:22px;height:1px;background:var(--line)}
+.road .line i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--gold2));transition:width 2.4s var(--ease)}
+.road.in .line i{width:100%}
+.ph{position:relative;padding-top:58px}
+.ph .node{position:absolute;top:10px;left:0;width:25px;height:25px;border-radius:50%;background:var(--cream);border:1px solid var(--gold);display:grid;place-items:center}
+.ph .node::after{content:"";width:9px;height:9px;border-radius:50%;background:var(--gold)}
+.ph .when{font:600 11.5px var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.ph h4{font-size:30px;margin:8px 0 14px}
+.ph ul{list-style:none;display:grid;gap:9px}
+.ph li{font-size:15px;color:var(--muted);padding-left:20px;position:relative}
+.ph li::before{content:"";position:absolute;left:0;top:.7em;width:8px;height:1px;background:var(--gold)}
+@media(max-width:860px){.road{grid-template-columns:1fr}.road .line{display:none}}
+
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:22px;overflow:hidden;margin-top:20px}
+.kpi{background:var(--paper);padding:26px 22px}
+.kpi .v{font:300 38px/1 var(--serif);color:var(--ink)}
+.kpi .l{margin-top:10px;font-size:14px;color:var(--muted)}
+@media(max-width:860px){.kpis{grid-template-columns:1fr 1fr}}
+
+.shield{margin-top:20px;padding:34px;border-radius:24px;border:1px solid rgba(165,64,44,.25);background:linear-gradient(135deg,rgba(165,64,44,.05),rgba(165,64,44,0))}
+.shield h4{font-size:24px;margin-bottom:16px;display:flex;align-items:center;gap:12px}
+.shield h4 svg{width:22px;height:22px;color:var(--warn)}
+.shield ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px 32px}
+.shield li{font-size:15px;color:var(--muted);padding-left:18px;position:relative}
+.shield li::before{content:"";position:absolute;left:0;top:.65em;width:6px;height:6px;border-radius:50%;background:var(--warn)}
+.shield li b{color:var(--ink);font-weight:600}
+@media(max-width:760px){.shield ul{grid-template-columns:1fr}}
+
+.need{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+.nd{padding:24px 22px;border-radius:18px;background:#fff;border:1px solid var(--line);counter-increment:nd}
+.nd::before{content:counter(nd,decimal-leading-zero);font:300 22px var(--serif);color:var(--gold);display:block;margin-bottom:10px}
+.nd h4{font:500 18px/1.3 var(--serif);margin-bottom:6px}
+.nd p{font-size:14.5px;color:var(--muted)}
+.needs{counter-reset:nd}
+@media(max-width:860px){.need{grid-template-columns:1fr}}
+
+/* closing */
+.close{position:relative;background:var(--ink);color:#EFEBE2;padding:clamp(100px,14vw,180px) 0;overflow:hidden}
+.close .wrap{display:grid;grid-template-columns:auto 1fr;gap:64px;align-items:center}
+.close .face{width:clamp(180px,22vw,280px);aspect-ratio:1;border-radius:50%;overflow:hidden;position:relative;box-shadow:0 0 0 1px rgba(216,185,108,.35),0 0 0 14px rgba(216,185,108,.05),0 40px 80px -30px #000}
+.close .face img{width:100%;height:100%;object-fit:cover}
+.close h2{color:#fff}
+.close p{margin-top:24px;max-width:640px;color:rgba(239,235,226,.7);font-size:18px}
+.sig{margin-top:36px;display:flex;align-items:center;gap:16px;font-size:14px;color:rgba(239,235,226,.55)}
+.sig b{display:block;font:400 22px var(--serif);color:var(--gold2)}
+.close .glow{position:absolute;width:700px;height:700px;border-radius:50%;left:-200px;top:-200px;background:radial-gradient(circle,rgba(47,122,99,.35),transparent 65%);animation:drift 16s ease-in-out infinite alternate}
+@media(max-width:760px){.close .wrap{grid-template-columns:1fr;gap:36px}}
+footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.06);padding:26px 0 34px;color:rgba(239,235,226,.38);font-size:12.5px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  [data-r]{opacity:1;transform:none;clip-path:none}
+}
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" id="progress"></div>
+
+<nav class="nav" id="nav" aria-label="Capítulos">
+  <span class="brand">Dr. Nichollas <i>·</i> Estudo</span>
+  <div class="links">
+    <a href="#c1">01 Perfil</a>
+    <a href="#c2">02 Território</a>
+    <a href="#c3">03 Conteúdo</a>
+    <a href="#c4">04 Mídia</a>
+    <a href="#c5">05 Agenda</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <span class="kicker fade" style="animation-delay:.1s">Estudo de crescimento · Novembro 2026</span>
+      <h1 aria-label="Do perfil à agenda cheia.">
+        <span class="w"><span style="--i:0">Do</span></span> <span class="w"><span style="--i:1">perfil</span></span><br>
+        <span class="w"><span style="--i:2">à</span></span> <span class="w"><span style="--i:3"><em>agenda</em></span></span><br>
+        <span class="w"><span style="--i:4">cheia.</span></span>
+      </h1>
+      <p class="lead fade" style="animation-delay:.9s">Nichollas, analisei o <b>@drnichollasmourao</b>, o seu site e o caminho que um paciente de Americana percorre até marcar a consulta. Aqui eu mostro onde o perfil perde agendamentos hoje e o plano que eu defini para os próximos 90 dias em <b>Americana, Nova Odessa, Sumaré e Santa Bárbara d'Oeste</b>.</p>
+      <div class="meta fade" style="animation-delay:1.1s">
+        <div><b>5 capítulos</b>leitura de 12 minutos</div>
+        <div><b>4 cidades</b>~762 mil habitantes</div>
+        <div><b>90 dias</b>de execução</div>
+      </div>
+    </div>
+    <div class="portrait">
+      <div class="ring" aria-hidden="true"></div>
+      <div class="arch"><img id="heroImg" src="img/hero.jpg" alt="Dr. Nichollas Mourão" width="720" height="575"></div>
+      <div class="badge b1"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><div><b>17,2 mil</b>seguidores</div></div>
+      <div class="badge b2"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span><div><b>+4.000</b>pacientes atendidos</div></div>
+      <div class="badge b3"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2 4 6v6c0 5 3.4 9.3 8 10 4.6-.7 8-5 8-10V6l-8-4z"/></svg></span><div><b>Faixa preta</b>jiu-jitsu</div></div>
+    </div>
+  </div>
+  <div class="cue" aria-hidden="true"></div>
+</header>
+
+<!-- 01 -->
+<section class="s paper" id="c1">
+  <div class="bignum" data-par="0.15" aria-hidden="true">01</div>
+  <div class="wrap">
+    <div class="chap" data-r><span class="n">01</span><span class="t">O que eu vi no seu perfil</span></div>
+    <h2 data-r>Você já tem o que muita clínica tenta <em>comprar</em>.</h2>
+    <p class="intro" data-r>Antes de falar do que falta, quero registrar o que já está construído. São ativos que levam anos para existir e que hoje trabalham abaixo do que poderiam.</p>
+
+    <div class="assets">
+      <div class="asset" data-r><div class="v" data-count="17.2" data-dec="1" data-suf=" mil">0</div><div class="l"><b>seguidores</b>, com selo de verificado. A audiência já existe; falta direcioná-la para a região.</div></div>
+      <div class="asset" data-r style="--d:.08s"><div class="v">+<span data-count="4000" data-sep="1">0</span></div><div class="l"><b>pacientes atendidos</b>. Prova de volume que pouco médico da região consegue mostrar.</div></div>
+      <div class="asset" data-r style="--d:.16s"><div class="v">USP</div><div class="l"><b>Nutrologia pela FMRP-USP</b> e Medicina do Esporte. Formação que se explica sozinha.</div></div>
+      <div class="asset" data-r><div class="v">Faixa <small>preta</small></div><div class="l"><b>Jiu-jitsu.</b> Você vive o que prescreve, e isso é o que mais diferencia um médico de performance.</div></div>
+      <div class="asset" data-r style="--d:.08s"><div class="v" data-count="7">0</div><div class="l"><b>destaques organizados</b>, incluindo Localização, Pacientes e Dúvidas. A estrutura está pronta para ser reordenada.</div></div>
+      <div class="asset" data-r style="--d:.16s"><div class="v">Site</div><div class="l"><b>drnichollasmourao.com.br</b> com método claro: Avaliação, Investigação, Estratégia e Acompanhamento.</div></div>
+    </div>
+
+    <p class="sub" data-r>Onde o perfil deixa agendamento na mesa</p>
+    <div class="leaks">
+      <div class="leak" data-r><span class="k">01</span><h4>A bio não diz onde você atende.</h4><p>Quem chega pelo Explorar ou por um Reels compartilhado não descobre que você está em Americana. O destaque "Localização" existe, mas exige um clique que a maioria das pessoas não dá.</p></div>
+      <div class="leak" data-r><span class="k">02</span><h4>O convite para agendar fica escondido.</h4><p>A bio termina em <b>"Agende sua…"</b> e o resto some atrás do "mais". A frase mais importante do perfil é justamente a que ninguém lê.</p></div>
+      <div class="leak" data-r><span class="k">03</span><h4>A conversa começa como dúvida.</h4><p>O link da bio leva ao site, e o WhatsApp de Americana abre com <b>"gostaria de saber como funciona a consulta"</b>. Uma conversa que nasce como pergunta esfria mais rápido do que uma que nasce como pedido de horário.</p></div>
+      <div class="leak" data-r><span class="k">04</span><h4>O ritmo de postagem é irregular.</h4><p>Entre 25 de setembro e 23 de outubro o feed ficou quase um mês sem post novo. Depois vieram três publicações em cinco dias (6, 9 e 10 de novembro). O algoritmo distribui menos para quem some, e o seguidor esquece.</p></div>
+      <div class="leak" data-r><span class="k">05</span><h4>Parte do conteúdo atrai o público errado.</h4><p>Memes e vídeos de fisiculturismo geram curtida de qualquer lugar do Brasil. Engajam, mas quem mora em Recife não marca consulta no Jardim Glória.</p></div>
+      <div class="leak" data-r><span class="k">06</span><h4>Os números não conversam entre si.</h4><p>O Instagram diz <b>+4.000 pacientes</b> e o site diz <b>mais de 3 mil</b>. Parece detalhe, mas para quem ainda está decidindo se confia, qualquer divergência pesa. Também não encontrei seu perfil no Doctoralia, que é onde muita gente da região pesquisa médico.</p></div>
+    </div>
+
+    <div class="tension" data-r>
+      <p>Hoje o perfil cresce para o Brasil.<br>A sua agenda mora em <em>quatro cidades</em>.</p>
+      <div class="by">Esse é o problema que o plano resolve</div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 -->
+<section class="s dark" id="c2">
+  <div class="bignum" data-par="0.15" aria-hidden="true">02</div>
+  <div class="wrap">
+    <div class="chap" data-r><span class="n">02</span><span class="t">O território e a tese</span></div>
+    <h2 data-r>Quatro cidades, <em>762 mil pessoas</em> e um médico que treina.</h2>
+    <p class="intro" data-r>Eu defini o crescimento a partir do mapa. Todas as cidades ficam num raio de cerca de 15 km do consultório no Jardim Glória, e cada seguidor novo que mora aqui vale mais do que dez seguidores de fora.</p>
+
+    <div class="terr">
+      <div class="map" id="map" data-r>
+        <svg viewBox="0 0 500 500" aria-label="Mapa esquemático das quatro cidades">
+          <defs>
+            <radialGradient id="g1"><stop offset="0" stop-color="#D8B96C" stop-opacity=".55"/><stop offset="1" stop-color="#D8B96C" stop-opacity="0"/></radialGradient>
+            <pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse"><path d="M25 0H0V25" fill="none" stroke="rgba(255,255,255,.04)"/></pattern>
+          </defs>
+          <rect width="500" height="500" fill="url(#grid)"/>
+          <circle cx="250" cy="210" r="175" fill="none" stroke="rgba(216,185,108,.16)" stroke-dasharray="2 6"/>
+          <circle cx="250" cy="210" r="95" fill="none" stroke="rgba(216,185,108,.12)"/>
+          <path class="route" d="M250 210 L120 270"/>
+          <path class="route" d="M250 210 L360 250"/>
+          <path class="route" d="M250 210 L330 370"/>
+          <circle cx="250" cy="210" r="70" fill="url(#g1)"/>
+          <circle class="pulse" cx="250" cy="210" r="14" fill="none" stroke="#D8B96C"/>
+          <circle cx="250" cy="210" r="9" fill="#D8B96C"/>
+          <text class="lbl" x="250" y="176" text-anchor="middle">Americana</text>
+          <text class="pop" x="250" y="245" text-anchor="middle">consultório · Jardim Glória</text>
+          <circle cx="120" cy="270" r="20" fill="rgba(127,203,176,.12)"/><circle cx="120" cy="270" r="6" fill="#7FCBB0"/>
+          <text class="lbl" x="120" y="306" text-anchor="middle">Santa Bárbara</text><text class="pop" x="120" y="322" text-anchor="middle">d'Oeste</text>
+          <circle cx="360" cy="250" r="14" fill="rgba(127,203,176,.12)"/><circle cx="360" cy="250" r="5" fill="#7FCBB0"/>
+          <text class="lbl" x="372" y="226" text-anchor="middle">Nova Odessa</text>
+          <circle cx="330" cy="370" r="22" fill="rgba(127,203,176,.12)"/><circle cx="330" cy="370" r="6" fill="#7FCBB0"/>
+          <text class="lbl" x="330" y="408" text-anchor="middle">Sumaré</text>
+          <text class="pop" x="250" y="478" text-anchor="middle">Mapa esquemático · raio aproximado de 15 km</text>
+        </svg>
+      </div>
+      <div>
+        <div class="cities">
+          <div class="city" data-r style="--w:100%"><h4>Sumaré</h4><span class="num">279.545</span><span class="tag">a maior das quatro, e ainda pouco disputada por médico de performance</span><div class="bar"><i></i></div></div>
+          <div class="city" data-r style="--w:85%;--d:.08s"><h4>Americana</h4><span class="num">237.240</span><span class="tag core">núcleo · onde fica o consultório</span><div class="bar"><i></i></div></div>
+          <div class="city" data-r style="--w:66%;--d:.16s"><h4>Santa Bárbara d'Oeste</h4><span class="num">183.347</span><span class="tag">colada em Americana, mesmo eixo de deslocamento</span><div class="bar"><i></i></div></div>
+          <div class="city" data-r style="--w:22%;--d:.24s"><h4>Nova Odessa</h4><span class="num">62.019</span><span class="tag">menor, mas a poucos minutos do consultório</span><div class="bar"><i></i></div></div>
+        </div>
+        <div class="total" data-r><span>Total da área · Censo IBGE 2022</span><b data-count="762151" data-sep="1">0</b></div>
+      </div>
+    </div>
+
+    <p class="sub" data-r>O paciente que eu quero que o perfil atraia</p>
+    <div class="persona">
+      <p class="who" data-r>Homens e mulheres de <em>30 a 55 anos</em> da região. Empresários, gestores e profissionais liberais com rotina pesada, que treinam ou querem voltar a treinar e sentem que o corpo não acompanha mais o ritmo.</p>
+      <div class="signals">
+        <div class="signal" data-r><b>O que ele sente</b>Cansaço que não passa com o fim de semana, sono que não recupera, energia que acaba no meio da tarde.</div>
+        <div class="signal" data-r style="--d:.08s"><b>O que ele já tentou</b>Dieta da internet, academia sem orientação, exame de rotina com tudo "dentro da referência".</div>
+        <div class="signal" data-r><b>O que ele quer</b>Emagrecer sem perder músculo, render no trabalho e no treino, cuidar da saúde sem parar a vida.</div>
+        <div class="signal" data-r style="--d:.08s"><b>O que faz ele agendar</b>Ver um médico perto de casa que entende a rotina dele, explica com exame na mão e treina de verdade.</div>
+      </div>
+    </div>
+
+    <div class="thesis" data-r>
+      <div class="glow" aria-hidden="true"></div>
+      <p class="q">O médico da região que <em>treina como o paciente</em> e mede antes de prescrever.</p>
+      <p>Essa é a tese que eu escolhi para o perfil. Ela junta o que você já tem de mais forte (formação USP, Medicina do Esporte, faixa preta, mais de quatro mil pacientes) com a frase que o seu site já usa: <i>"Cuidado médico à altura da sua rotina."</i> O jiu-jitsu deixa de ser curiosidade da bio e passa a ser a prova de que você entende o corpo de quem não pode parar.</p>
+      <p class="note-sp">O consultório de São Paulo (Jardim Paulista) fica fora deste plano. Aqui o foco é a região de Americana.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 03 -->
+<section class="s" id="c3">
+  <div class="bignum" data-par="0.15" aria-hidden="true">03</div>
+  <div class="wrap">
+    <div class="chap" data-r><span class="n">03</span><span class="t">Perfil e conteúdo</span></div>
+    <h2 data-r>O perfil vira <em>recepção</em>. O conteúdo traz o paciente da região.</h2>
+
+    <p class="sub" data-r><span class="move">Movimento 1 · 48 horas</span></p>
+    <div class="split" style="margin-top:0">
+      <div data-r>
+        <div class="phone">
+          <div class="screen">
+            <div class="toggle" role="tablist">
+              <button class="on" data-v="hoje" role="tab" aria-selected="true">Hoje</button>
+              <button data-v="nova" role="tab" aria-selected="false">Como eu proponho</button>
+            </div>
+            <div class="ig-top">
+              <div class="ig-av"><img src="img/face.jpg" alt=""></div>
+              <div class="ig-stats"><div><b>—</b>posts</div><div><b>17,2 mil</b>seguidores</div><div><b>1.426</b>seguindo</div></div>
+            </div>
+            <div class="bio">
+              <div class="v" data-v="hoje">
+                <div class="ig-name">Dr Nichollas Mourão | Medicina do Esporte • Nutrologia USP <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#0095f6"/><path d="m8 12 3 3 5-6" stroke="#fff" stroke-width="2" fill="none"/></svg></div>
+                Alta performance •Emagrecimento •Saúde hormonal<br>
+                + 4.000 Pacientes atendidos<br>
+                Jiu Jitsu Black Belt ⬛⬛⬛🟥⬛<br>
+                Agende sua <span class="more">… mais</span><br>
+                <span class="lnk">drnichollasmourao.com.br</span>
+              </div>
+              <div class="v off" data-v="nova">
+                <div class="ig-name">Dr. Nichollas Mourão | Nutrólogo em Americana <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#0095f6"/><path d="m8 12 3 3 5-6" stroke="#fff" stroke-width="2" fill="none"/></svg></div>
+                Medicina do Esporte e Nutrologia · USP<br>
+                Energia, emagrecimento e saúde metabólica <span class="hl">com exame na mão</span><br>
+                📍 <span class="hl">Americana · atendo Sumaré, SBO e Nova Odessa</span><br>
+                🥋 Faixa preta de jiu-jitsu · +4.000 pacientes<br>
+                👇 <span class="hl">Agende sua consulta</span><br>
+                <span class="lnk">wa.me/5519981708468</span>
+              </div>
+            </div>
+            <div class="ig-btn"><span>Seguir</span><span class="cta">Agendar</span><span>Mensagem</span></div>
+            <div class="hls" id="hls">
+              <div class="hl"><i>✦</i>Insights</div><div class="hl"><i>⌂</i>Estrutura</div><div class="hl"><i>⌖</i>Localização</div><div class="hl"><i>↗</i>Performance</div><div class="hl"><i>☺</i>Pacientes</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fixes">
+        <div class="fix" data-r><span class="dot">1</span><div><h4>Nome com a cidade</h4><p>O campo de nome é o único texto do perfil que entra na busca do Instagram. Com <code>Nutrólogo em Americana</code> ali, você passa a aparecer para quem pesquisa isso na região.</p></div></div>
+        <div class="fix" data-r style="--d:.06s"><span class="dot">2</span><div><h4>Bio que cabe sem o "mais"</h4><p>Cinco linhas: formação, o que você resolve, onde atende, a prova e o convite para agendar. A cidade aparece antes de qualquer outra informação de contexto.</p></div></div>
+        <div class="fix" data-r style="--d:.12s"><span class="dot">3</span><div><h4>Link direto para agendar</h4><p>O link da bio vai direto ao WhatsApp de Americana com a mensagem <code>Olá! Vi seu Instagram e quero agendar minha consulta em Americana.</code> A conversa já nasce como pedido de horário.</p></div></div>
+        <div class="fix" data-r style="--d:.18s"><span class="dot">4</span><div><h4>Destaques na ordem da decisão</h4><p>Primeiro <b>Agende</b> (como funciona a consulta e os horários), depois <b>Onde atendo</b>, <b>Método</b>, <b>Pacientes</b>, <b>Dúvidas</b> e <b>Meu treino</b>. Os nomes ficam claros para quem chega pela primeira vez.</p></div></div>
+        <div class="fix" data-r style="--d:.24s"><span class="dot">5</span><div><h4>Três posts fixados</h4><p>Um Reels de apresentação citando Americana, um carrossel "Como funciona a primeira consulta, do exame ao plano" e um Reels mostrando o caminho até o consultório e como agendar.</p></div></div>
+      </div>
+    </div>
+
+    <p class="sub" data-r><span class="move">Movimento 2 · conteúdo contínuo</span></p>
+    <h3 data-r style="max-width:820px">Quatro pilares, todos escritos para quem mora aqui.</h3>
+    <div class="pillars">
+      <div class="pillar" data-r style="--w:35%"><div class="pct">35%</div><h4>Rotina real</h4><p>Cansaço, sono, energia, o empresário que não para. É onde o paciente se reconhece e pensa "isso sou eu".</p><span class="fill"></span></div>
+      <div class="pillar" data-r style="--w:25%;--d:.08s"><div class="pct">25%</div><h4>Método e exame</h4><p>Como você investiga, o que olha em um exame, por que a avaliação conecta os pontos. Toda quinta, um "exame comentado" sem identificar o paciente.</p><span class="fill"></span></div>
+      <div class="pillar" data-r style="--w:20%;--d:.16s"><div class="pct">20%</div><h4>Vida de quem treina</h4><p>Seu treino de jiu-jitsu, sua alimentação, sua rotina. Esse pilar ocupa o espaço dos memes e prova que você vive o que recomenda.</p><span class="fill"></span></div>
+      <div class="pillar" data-r style="--w:20%;--d:.24s"><div class="pct">20%</div><h4>Território</h4><p>A cidade no gancho, na legenda e na imagem. Gravações em lugares reconhecíveis da região e collabs com academias das quatro cidades.</p><span class="fill"></span></div>
+    </div>
+
+    <div class="week">
+      <div class="day hot" data-r><span class="d">Seg</span><span class="f">Reels</span><span class="x">Rotina real</span></div>
+      <div class="day" data-r style="--d:.05s"><span class="d">Ter</span><span class="f">Stories</span><span class="x">Caixinha de perguntas</span></div>
+      <div class="day hot" data-r style="--d:.1s"><span class="d">Qua</span><span class="f">Reels</span><span class="x">Método</span></div>
+      <div class="day hot" data-r style="--d:.15s"><span class="d">Qui</span><span class="f">Reels</span><span class="x">Exame comentado</span></div>
+      <div class="day hot" data-r style="--d:.2s"><span class="d">Sex</span><span class="f">Reels</span><span class="x">Treino ou território</span></div>
+      <div class="day" data-r style="--d:.25s"><span class="d">Sáb</span><span class="f">Carrossel</span><span class="x">Guia salvável</span></div>
+      <div class="day off" data-r style="--d:.3s"><span class="d">Dom</span><span class="f">Stories</span><span class="x">Bastidor leve</span></div>
+    </div>
+    <p data-r style="margin-top:18px;font-size:15px;color:var(--muted)">Quatro Reels e um carrossel por semana, com stories todos os dias. Para isso não depender da sua agenda, eu organizo <b style="color:var(--ink)">um dia de gravação por mês com 16 roteiros prontos</b>.</p>
+  </div>
+
+  <div class="marq" aria-label="Exemplos de ganchos">
+    <div class="track">
+      <span class="hook">Se você mora em Americana e acorda cansado mesmo dormindo 7 horas, assista até o fim.</span>
+      <span class="hook">O exame que eu peço em toda primeira consulta.</span>
+      <span class="hook">Empresário de Sumaré: o seu corpo está pagando a conta da sua agenda.</span>
+      <span class="hook">Por que o seu "exame normal" não explica o seu cansaço.</span>
+      <span class="hook">O que eu como antes do treino de jiu-jitsu.</span>
+      <span class="hook">Se você mora em Americana e acorda cansado mesmo dormindo 7 horas, assista até o fim.</span>
+      <span class="hook">O exame que eu peço em toda primeira consulta.</span>
+      <span class="hook">Empresário de Sumaré: o seu corpo está pagando a conta da sua agenda.</span>
+      <span class="hook">Por que o seu "exame normal" não explica o seu cansaço.</span>
+      <span class="hook">O que eu como antes do treino de jiu-jitsu.</span>
+    </div>
+    <div class="track rev">
+      <span class="hook">Emagrecer depois dos 40 sem perder músculo: o que eu olho primeiro.</span>
+      <span class="hook">Três sinais de que a sua rotina está gastando o seu metabolismo.</span>
+      <span class="hook">Santa Bárbara, Nova Odessa, Sumaré: sim, eu atendo vocês.</span>
+      <span class="hook">A energia acaba às 15h? Isso tem explicação no exame.</span>
+      <span class="hook">Emagrecer depois dos 40 sem perder músculo: o que eu olho primeiro.</span>
+      <span class="hook">Três sinais de que a sua rotina está gastando o seu metabolismo.</span>
+      <span class="hook">Santa Bárbara, Nova Odessa, Sumaré: sim, eu atendo vocês.</span>
+      <span class="hook">A energia acaba às 15h? Isso tem explicação no exame.</span>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="ctafix" data-r>
+      <span>Fechamento de todo vídeo</span>
+      <p>"Para agendar sua consulta em Americana, toque no link da minha bio."</p>
+    </div>
+  </div>
+</section>
+
+<!-- 04 -->
+<section class="s dark" id="c4">
+  <div class="bignum" data-par="0.15" aria-hidden="true">04</div>
+  <div class="wrap">
+    <div class="chap" data-r><span class="n">04</span><span class="t">Mídia local e presença fora do Instagram</span></div>
+    <h2 data-r>Anúncio só para quem consegue <em>chegar ao consultório</em>.</h2>
+    <p class="intro" data-r><span class="move" style="margin-bottom:18px">Movimento 3</span><br>O orgânico constrói autoridade, e o anúncio leva essa autoridade para as pessoas certas das quatro cidades. Montei três etapas, e cada uma exclui quem já passou para a seguinte, para a verba não se repetir na mesma pessoa.</p>
+
+    <div class="funnel">
+      <div class="stage" data-r style="--w:100%"><div class="nm"><small>Etapa 1 · Descoberta</small>Visitas ao perfil</div><p>Os melhores Reels de <b>Rotina real</b> e <b>Território</b>, para pessoas de 28 a 55 anos das quatro cidades. Dois conjuntos: <b>Americana + Nova Odessa (60%)</b> e <b>Sumaré + Santa Bárbara (40%)</b>.</p><div class="pc">40%<small>da verba</small></div></div>
+      <div class="stage" data-r style="--w:55%;--d:.1s"><div class="nm"><small>Etapa 2 · Confiança</small>Consideração</div><p>O vídeo "Como funciona a consulta" e o exame comentado para quem <b>engajou com o perfil nos últimos 60 dias</b> ou assistiu metade de um Reels.</p><div class="pc">20%<small>da verba</small></div></div>
+      <div class="stage" data-r style="--w:80%;--d:.2s"><div class="nm"><small>Etapa 3 · Agendamento</small>Mensagens</div><p>Você mesmo convidando, em vídeo curto: <b>"Estou com horários em Americana esta semana."</b> O botão abre o WhatsApp com o pedido de agendamento já escrito.</p><div class="pc">40%<small>da verba</small></div></div>
+    </div>
+
+    <p class="sub" data-r>A verba que eu defini, condicionada ao resultado</p>
+    <div class="ladder">
+      <div class="rung cur" data-r><span class="m">Mês 1 · aprendizado</span><div class="val">R$ 2.400</div><span class="dd">R$ 80 por dia</span><p>Primeiro mês para descobrir o custo real por conversa e por consulta marcada na região.</p></div>
+      <div class="rung" data-r style="--d:.08s"><span class="m">Mês 2 · se o custo bater a meta</span><div class="val">R$ 3.600</div><span class="dd">R$ 120 por dia</span><p>Sobe só se o custo por consulta agendada ficar dentro da meta definida no dia 30.</p></div>
+      <div class="rung" data-r style="--d:.16s"><span class="m">Mês 3 · escala</span><div class="val">R$ 4.800</div><span class="dd">R$ 160 por dia</span><p>Entra também a busca no Google para quem já procura "nutrólogo em Americana".</p></div>
+    </div>
+
+    <div class="sim" data-r>
+      <div class="in-p">
+        <div class="field"><label for="sv">Verba mensal <b id="svO">R$ 2.400</b></label><input type="range" id="sv" min="1500" max="6000" step="100" value="2400"></div>
+        <div class="field"><label for="sc">Custo por conversa no WhatsApp <b id="scO">R$ 35</b></label><input type="range" id="sc" min="15" max="70" step="1" value="35"></div>
+        <div class="field"><label for="sa">Conversas que viram consulta <b id="saO">25%</b></label><input type="range" id="sa" min="10" max="50" step="1" value="25"></div>
+        <div class="field"><label for="st">Valor da consulta <b id="stO">R$ 800</b></label><input type="range" id="st" min="300" max="2000" step="50" value="800"></div>
+      </div>
+      <div class="out">
+        <div class="o-row"><span>Conversas por mês</span><b id="oC">69</b></div>
+        <div class="o-row"><span>Consultas agendadas</span><b id="oA">17</b></div>
+        <div class="o-row big"><span>Faturamento em consultas</span><b id="oF">R$ 13.600</b></div>
+        <div class="o-row"><span>Retorno sobre a verba</span><b id="oR">5,7x</b></div>
+        <p class="disc">Simulação com referências de mercado para saúde no interior de São Paulo. Os valores reais saem do primeiro mês de anúncio. Ajuste o valor da consulta para o seu. O cálculo considera só a primeira consulta, sem retornos e acompanhamento.</p>
+      </div>
+    </div>
+
+    <p class="sub" data-r>Fora do Instagram</p>
+    <div class="outside">
+      <div class="out-c" data-r><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span><h4>Ficha no Google</h4><p>Perfil da Empresa completo no endereço de Americana, com fotos do consultório, horários e o link de agendamento. Depois de cada consulta, a equipe pede a avaliação ao paciente.</p></div>
+      <div class="out-c" data-r style="--d:.08s"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span><h4>Doctoralia</h4><p>Hoje não existe perfil seu por lá. O cadastro básico coloca você na busca de quem procura nutrólogo e médico do esporte nas quatro cidades.</p></div>
+      <div class="out-c" data-r style="--d:.16s"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg></span><h4>Academias da região</h4><p>Uma collab por mês com academias de jiu-jitsu, musculação e assessorias de corrida das quatro cidades: um Reels juntos e uma conversa com os alunos. Sem pagamento por indicação, que o CFM veda.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 -->
+<section class="s paper" id="c5">
+  <div class="bignum" data-par="0.15" aria-hidden="true">05</div>
+  <div class="wrap">
+    <div class="chap" data-r><span class="n">05</span><span class="t">Conversão e os próximos 90 dias</span></div>
+    <h2 data-r>O agendamento se ganha <em>no WhatsApp</em>.</h2>
+    <p class="intro" data-r>Todo o trabalho dos capítulos anteriores termina numa conversa. Se ela demora ou não oferece horário, o paciente que já estava pronto vai embora. Por isso eu padronizei o atendimento.</p>
+
+    <div class="chat-wrap">
+      <div class="rules">
+        <div class="rule" data-r><span class="t">5 min</span><div><h4>Tempo máximo de resposta</h4><p>No horário comercial. Fora dele, mensagem automática dizendo quando a equipe responde.</p></div></div>
+        <div class="rule" data-r style="--d:.06s"><span class="t">2</span><div><h4>Horários concretos na mesa</h4><p>Nunca "qual horário fica bom para você?". Sempre duas opções reais da semana.</p></div></div>
+        <div class="rule" data-r style="--d:.12s"><span class="t">3</span><div><h4>Retomadas de quem não respondeu</h4><p>Em 24 horas, em 72 horas e em 7 dias. Quem some quase sempre se distraiu, e poucos desistiram de verdade.</p></div></div>
+        <div class="rule" data-r style="--d:.18s"><span class="t">100%</span><div><h4>Conversas com etiqueta de origem</h4><p>Anúncio, orgânico, Google, indicação e a cidade. Sem isso não dá para saber o que trouxe cada consulta.</p></div></div>
+      </div>
+      <div class="chat" id="chat" data-r>
+        <div class="chat-h"><img src="img/face.jpg" alt=""><div><b>Consultório Dr. Nichollas</b><span>Americana · online</span></div></div>
+        <div class="msg c" style="transition-delay:.2s">Olá! Vi seu Instagram e quero agendar minha consulta em Americana.<time>14:02</time></div>
+        <div class="msg p" style="transition-delay:.9s"><span class="step">Acolher</span>Oi, Marcos! Que bom que você chamou. Você mora em Americana ou numa cidade vizinha?<time>14:03</time></div>
+        <div class="msg c" style="transition-delay:1.5s">Santa Bárbara.<time>14:03</time></div>
+        <div class="msg p" style="transition-delay:2.1s"><span class="step">Entender</span>Ótimo, fica pertinho. O que te fez procurar o Dr. Nichollas agora?<time>14:04</time></div>
+        <div class="msg c" style="transition-delay:2.7s">Ando muito cansado e engordei desde que assumi a gerência.<time>14:05</time></div>
+        <div class="msg p" style="transition-delay:3.3s"><span class="step">Explicar e oferecer</span>Isso é bem comum em quem tem rotina puxada, e é exatamente o que ele investiga na primeira consulta: avaliação, exames e um plano para a sua rotina. Tenho terça às 15h ou quinta às 10h. Qual fica melhor?<time>14:05</time></div>
+      </div>
+    </div>
+
+    <p class="sub" data-r>Os 90 dias</p>
+    <div class="road" id="road" data-r>
+      <div class="line"><i></i></div>
+      <div class="ph"><span class="node"></span><span class="when">Dias 1 a 15</span><h4>Fundação</h4><ul><li>Nome, bio, link e destaques novos</li><li>Três posts fixados gravados e publicados</li><li>Ficha no Google e perfil no Doctoralia</li><li>Primeiro dia de gravação com 16 roteiros</li><li>Roteiro do WhatsApp com a equipe</li></ul></div>
+      <div class="ph"><span class="node"></span><span class="when">Dias 16 a 45</span><h4>Ritmo</h4><ul><li>Quatro Reels e um carrossel por semana</li><li>Primeiro mês de anúncios, com R$ 2.400</li><li>Primeiras collabs com academias</li><li>Leitura semanal das conversas e das consultas</li></ul></div>
+      <div class="ph"><span class="node"></span><span class="when">Dias 46 a 90</span><h4>Escala</h4><ul><li>Verba sobe conforme o custo por consulta</li><li>Busca no Google para "nutrólogo em Americana"</li><li>Exame comentado como série fixa de quinta</li><li>Revisão do plano com os números reais</li></ul></div>
+    </div>
+
+    <p class="sub" data-r>Como eu vou medir</p>
+    <div class="kpis">
+      <div class="kpi" data-r><div class="v">% região</div><div class="l">Seguidores das quatro cidades, lido nos insights. Esse é o número que mais importa.</div></div>
+      <div class="kpi" data-r style="--d:.06s"><div class="v">Conversas</div><div class="l">Pedidos de agendamento por semana, separados por origem.</div></div>
+      <div class="kpi" data-r style="--d:.12s"><div class="v">≥ 25%</div><div class="l">Meta de conversas que viram consulta marcada.</div></div>
+      <div class="kpi" data-r style="--d:.18s"><div class="v">R$ / consulta</div><div class="l">Custo de anúncio por consulta agendada, que define a escada de verba.</div></div>
+    </div>
+
+    <div class="shield" data-r>
+      <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2 4 6v6c0 5 3.4 9.3 8 10 4.6-.7 8-5 8-10V6l-8-4z"/><path d="M12 8v5M12 16h.01"/></svg>Cuidados com o CFM antes de rodar</h4>
+      <ul>
+        <li><b>RQE ao lado de cada especialidade</b> citada na bio, no site e nos anúncios. Hoje só o CRM-SP 258401 aparece.</li>
+        <li><b>"Saúde hormonal" longe de "alta performance".</b> A Resolução CFM 2.333/2023 veda terapia hormonal com finalidade estética ou de desempenho, e a bio atual coloca as duas ideias lado a lado.</li>
+        <li><b>Antes e depois</b> só dentro das regras da Resolução CFM 2.336/2023: com consentimento, finalidade educativa e sem promessa de resultado. Vale revisar a seção do site.</li>
+        <li><b>Nada de preço nem promessa de resultado</b> nos anúncios. Emagrecimento aparece como consequência do tratamento.</li>
+      </ul>
+    </div>
+
+    <p class="sub" data-r>O que eu preciso de você para começar</p>
+    <div class="need needs">
+      <div class="nd" data-r><h4>Seus RQEs</h4><p>Os números de registro de cada especialidade, para entrar na bio, no site e nos anúncios.</p></div>
+      <div class="nd" data-r style="--d:.06s"><h4>Agenda de Americana</h4><p>Dias e horários disponíveis e o valor da consulta, para o anúncio oferecer horário real.</p></div>
+      <div class="nd" data-r style="--d:.12s"><h4>Quem responde o WhatsApp</h4><p>O nome da pessoa que atende, para eu treinar o roteiro e as retomadas.</p></div>
+      <div class="nd" data-r><h4>Um dia de gravação</h4><p>Uma manhã por mês no consultório ou no treino. Eu chego com os 16 roteiros prontos.</p></div>
+      <div class="nd" data-r style="--d:.06s"><h4>Acessos</h4><p>Gerenciador de Anúncios e insights do Instagram, para registrar o ponto de partida no dia 1.</p></div>
+      <div class="nd" data-r style="--d:.12s"><h4>Um número oficial</h4><p>3 mil ou 4 mil pacientes. Escolhemos o número certo e ele passa a ser o mesmo em todo lugar.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="close">
+  <div class="glow" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="face" data-r="mask"><img src="img/face.jpg" alt="Dr. Nichollas Mourão"></div>
+    <div>
+      <h2 data-r>Nichollas, a audiência você já tem. Agora ela precisa <em>morar perto</em>.</h2>
+      <p data-r>Se você aprovar, eu começo pelos ajustes de perfil nas primeiras 48 horas, porque eles custam pouco e já mudam o que acontece com cada visita. Em seguida entram a gravação, o WhatsApp e os anúncios. Em 90 dias eu volto com os números e a gente decide o próximo passo juntos.</p>
+      <div class="sig" data-r><div><b>Felipe Cavalcanti</b>Estratégia de marketing · Felipe Digital</div></div>
+    </div>
+  </div>
+</section>
+<footer><div class="wrap"><span>Estudo preparado para o Dr. Nichollas Mourão · CRM-SP 258401</span><span>Dados públicos do perfil e do site coletados em 11/11/2026 · População: Censo IBGE 2022</span></div></footer>
+
+<script>
+(function(){
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let lenis = null;
+  if (!reduce && window.Lenis) {
+    lenis = new Lenis({ duration: 1.25, easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smoothWheel: true });
+    window.__lenis = lenis;
+    const raf = t => { lenis.raf(t); requestAnimationFrame(raf); };
+    requestAnimationFrame(raf);
+  }
+  // anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
+    const el = document.querySelector(a.getAttribute('href')); if (!el) return;
+    e.preventDefault();
+    lenis ? lenis.scrollTo(el, { offset: -10, duration: 1.6 }) : el.scrollIntoView({ behavior: 'smooth' });
+  }));
+
+  // reveal
+  const io = new IntersectionObserver(es => es.forEach(en => {
+    if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+  }), { threshold: .14, rootMargin: '0px 0px -6% 0px' });
+  document.querySelectorAll('[data-r]').forEach(el => io.observe(el));
+
+  // counters
+  const fmt = (n, dec, sep) => {
+    let s = dec ? n.toFixed(dec).replace('.', ',') : Math.round(n).toString();
+    if (sep) s = s.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    return s;
+  };
+  const cio = new IntersectionObserver(es => es.forEach(en => {
+    if (!en.isIntersecting) return;
+    const el = en.target; cio.unobserve(el);
+    const to = parseFloat(el.dataset.count), dec = +(el.dataset.dec || 0), sep = el.dataset.sep, suf = el.dataset.suf || '';
+    if (reduce) { el.textContent = fmt(to, dec, sep) + suf; return; }
+    const t0 = performance.now(), D = 1800;
+    const step = t => { const p = Math.min(1, (t - t0) / D), e = 1 - Math.pow(1 - p, 4);
+      el.textContent = fmt(to * e, dec, sep) + suf; if (p < 1) requestAnimationFrame(step); };
+    requestAnimationFrame(step);
+  }), { threshold: .5 });
+  document.querySelectorAll('[data-count]').forEach(el => cio.observe(el));
+
+  // scroll effects
+  const nav = document.getElementById('nav'), prog = document.getElementById('progress');
+  const heroImg = document.getElementById('heroImg');
+  const pars = [...document.querySelectorAll('[data-par]')];
+  const secs = ['c1','c2','c3','c4','c5'].map(id => document.getElementById(id));
+  const links = [...nav.querySelectorAll('a')];
+  const onScroll = () => {
+    const y = window.scrollY, h = document.documentElement.scrollHeight - innerHeight;
+    prog.style.transform = `scaleX(${h > 0 ? y / h : 0})`;
+    nav.classList.toggle('show', y > innerHeight * .7);
+    if (!reduce) {
+      if (y < innerHeight * 1.2) heroImg.style.translate = `0 ${y * -0.08}px`;
+      pars.forEach(el => { const r = el.parentElement.getBoundingClientRect();
+        if (r.bottom > 0 && r.top < innerHeight) el.style.transform = `translateY(${r.top * -el.dataset.par}px)`; });
+    }
+    let cur = -1; secs.forEach((s, i) => { if (s.getBoundingClientRect().top < innerHeight * .4) cur = i; });
+    links.forEach((a, i) => a.classList.toggle('on', i === cur));
+  };
+  lenis ? lenis.on('scroll', onScroll) : addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // phone toggle
+  const btns = document.querySelectorAll('.toggle button'), views = document.querySelectorAll('.bio .v'), hls = document.getElementById('hls');
+  const HL = {
+    hoje: [['✦','Insights'],['⌂','Estrutura'],['⌖','Localização'],['↗','Performance'],['☺','Pacientes']],
+    nova: [['☎','Agende',1],['⌖','Onde atendo'],['◎','Método'],['☺','Pacientes'],['?','Dúvidas']]
+  };
+  const setV = v => {
+    btns.forEach(b => { const on = b.dataset.v === v; b.classList.toggle('on', on); b.setAttribute('aria-selected', on); });
+    views.forEach(x => x.classList.toggle('off', x.dataset.v !== v));
+    hls.innerHTML = HL[v].map(([i, t, g]) => `<div class="hl${g ? ' g' : ''}"><i>${i}</i>${t}</div>`).join('');
+  };
+  btns.forEach(b => b.addEventListener('click', () => { setV(b.dataset.v); auto = false; }));
+  let auto = true, cur = 'hoje';
+  const phone = document.querySelector('.phone');
+  const pio = new IntersectionObserver(es => es.forEach(en => {
+    if (en.isIntersecting && auto) { pio.disconnect(); setTimeout(() => { if (auto) setV('nova'); }, 1800); }
+  }), { threshold: .6 });
+  pio.observe(phone);
+
+  // simulator
+  const $ = id => document.getElementById(id);
+  const brl = n => 'R$ ' + Math.round(n).toLocaleString('pt-BR');
+  const sim = () => {
+    const v = +$('sv').value, c = +$('sc').value, a = +$('sa').value / 100, t = +$('st').value;
+    $('svO').textContent = brl(v); $('scO').textContent = brl(c); $('saO').textContent = Math.round(a * 100) + '%'; $('stO').textContent = brl(t);
+    const conv = Math.round(v / c), cons = Math.round(conv * a), fat = cons * t;
+    $('oC').textContent = conv; $('oA').textContent = cons; $('oF').textContent = brl(fat);
+    $('oR').textContent = (fat / v).toLocaleString('pt-BR', { maximumFractionDigits: 1, minimumFractionDigits: 1 }) + 'x';
+  };
+  ['sv','sc','sa','st'].forEach(id => $(id).addEventListener('input', sim));
+  sim();
+})();
+</script>
+</body>
+</html>
